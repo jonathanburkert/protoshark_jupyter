@@ -12,7 +12,8 @@ Docker image with ProtoShark, and jupyter-notebook installed
 
 ## Examples
 ### Server
-```from protoShark.dissect import Server
+```
+from protoShark.dissect import Server
 
 proto_pipe = '/tmp/proto_pipe'
 
@@ -23,10 +24,12 @@ options = '-i eno1'
 #options = '-r traffic.pcap'
 
 s = Server(proto_pipe, options)
-s.start()```
+s.start()
+```
 
 ### Client
-```from protoShark.dissect import Client
+```
+from protoShark.dissect import Client
 from protoShark.packets import Packet
 from protoShark.write import FileWriter
 import binascii
@@ -40,4 +43,5 @@ while True:
     pkt = c.read_next()
     if pkt is None:
         break
-    pkts.append(pkt)```
+    pkts.append(pkt)
+```
